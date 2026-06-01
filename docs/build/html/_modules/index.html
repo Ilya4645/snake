@@ -1,0 +1,291 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" data-content_root="../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Обзор: исходный код модуля &mdash; документация snake 1.0</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=9ca2116e"></script>
+      <script src="../_static/doctools.js?v=888ff710"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=29b1f277"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            snake
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
+              <p class="caption" role="heading"><span class="caption-text">Оглавление:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Введение</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#id2">Обзор игры</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#id3">Архитектура проекта</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Установка</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#id2">Требования</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#id3">Пошаговая установка</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#id4">Зависимости</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#id5">Проверка установки</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Использование</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../usage.html#id2">Запуск игры</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage.html#id3">Параметры командной строки</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage.html#id4">Управление</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage.html#id5">Игровой процесс</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage.html#id6">Примеры использования</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Модули игры</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#module-game.base">game.base</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../modules.html#game.base.GameObject"><code class="docutils literal notranslate"><span class="pre">GameObject</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#game.base.GameObject.__eq__"><code class="docutils literal notranslate"><span class="pre">GameObject.__eq__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#game.base.GameObject.__init__"><code class="docutils literal notranslate"><span class="pre">GameObject.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#game.base.GameObject.draw"><code class="docutils literal notranslate"><span class="pre">GameObject.draw()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#game.base.GameObject.get_rect"><code class="docutils literal notranslate"><span class="pre">GameObject.get_rect()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#module-game.snake">game.snake</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../modules.html#game.snake.Direction"><code class="docutils literal notranslate"><span class="pre">Direction</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#game.snake.Direction.DOWN"><code class="docutils literal notranslate"><span class="pre">Direction.DOWN</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#game.snake.Direction.LEFT"><code class="docutils literal notranslate"><span class="pre">Direction.LEFT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#game.snake.Direction.RIGHT"><code class="docutils literal notranslate"><span class="pre">Direction.RIGHT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#game.snake.Direction.UP"><code class="docutils literal notranslate"><span class="pre">Direction.UP</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../modules.html#game.snake.Snake"><code class="docutils literal notranslate"><span class="pre">Snake</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#game.snake.Snake.__init__"><code class="docutils literal notranslate"><span class="pre">Snake.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#game.snake.Snake.change_direction"><code class="docutils literal notranslate"><span class="pre">Snake.change_direction()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#game.snake.Snake.check_self_collision"><code class="docutils literal notranslate"><span class="pre">Snake.check_self_collision()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#game.snake.Snake.check_wall_collision"><code class="docutils literal notranslate"><span class="pre">Snake.check_wall_collision()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#game.snake.Snake.draw"><code class="docutils literal notranslate"><span class="pre">Snake.draw()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#game.snake.Snake.get_head_position"><code class="docutils literal notranslate"><span class="pre">Snake.get_head_position()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#game.snake.Snake.grow"><code class="docutils literal notranslate"><span class="pre">Snake.grow()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#game.snake.Snake.move"><code class="docutils literal notranslate"><span class="pre">Snake.move()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#module-game.apple">game.apple</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../modules.html#game.apple.Apple"><code class="docutils literal notranslate"><span class="pre">Apple</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#game.apple.Apple.__init__"><code class="docutils literal notranslate"><span class="pre">Apple.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#game.apple.Apple.is_eaten"><code class="docutils literal notranslate"><span class="pre">Apple.is_eaten()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#game.apple.Apple.respawn"><code class="docutils literal notranslate"><span class="pre">Apple.respawn()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#module-game.game_controller">game.game_controller</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../modules.html#game.game_controller.GameController"><code class="docutils literal notranslate"><span class="pre">GameController</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#game.game_controller.GameController.__init__"><code class="docutils literal notranslate"><span class="pre">GameController.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#game.game_controller.GameController.draw"><code class="docutils literal notranslate"><span class="pre">GameController.draw()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#game.game_controller.GameController.draw_game_over"><code class="docutils literal notranslate"><span class="pre">GameController.draw_game_over()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#game.game_controller.GameController.handle_events"><code class="docutils literal notranslate"><span class="pre">GameController.handle_events()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#game.game_controller.GameController.reset_game"><code class="docutils literal notranslate"><span class="pre">GameController.reset_game()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#game.game_controller.GameController.run"><code class="docutils literal notranslate"><span class="pre">GameController.run()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#game.game_controller.GameController.save_game_result"><code class="docutils literal notranslate"><span class="pre">GameController.save_game_result()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#game.game_controller.GameController.update"><code class="docutils literal notranslate"><span class="pre">GameController.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#module-database.db_manager">database.db_manager</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../modules.html#database.db_manager.DatabaseManager"><code class="docutils literal notranslate"><span class="pre">DatabaseManager</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#database.db_manager.DatabaseManager.__init__"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#database.db_manager.DatabaseManager.get_all_games"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.get_all_games()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#database.db_manager.DatabaseManager.get_player_statistics"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.get_player_statistics()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#database.db_manager.DatabaseManager.get_top_scores"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.get_top_scores()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../modules.html#database.db_manager.DatabaseManager.save_game_result"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.save_game_result()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#gameobject">GameObject</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api.html#game.base.GameObject"><code class="docutils literal notranslate"><span class="pre">GameObject</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#game.base.GameObject.__eq__"><code class="docutils literal notranslate"><span class="pre">GameObject.__eq__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#game.base.GameObject.__init__"><code class="docutils literal notranslate"><span class="pre">GameObject.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#game.base.GameObject.draw"><code class="docutils literal notranslate"><span class="pre">GameObject.draw()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#game.base.GameObject.get_rect"><code class="docutils literal notranslate"><span class="pre">GameObject.get_rect()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#snake">Snake</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api.html#game.snake.Snake"><code class="docutils literal notranslate"><span class="pre">Snake</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#game.snake.Snake.__init__"><code class="docutils literal notranslate"><span class="pre">Snake.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#game.snake.Snake.change_direction"><code class="docutils literal notranslate"><span class="pre">Snake.change_direction()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#game.snake.Snake.check_self_collision"><code class="docutils literal notranslate"><span class="pre">Snake.check_self_collision()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#game.snake.Snake.check_wall_collision"><code class="docutils literal notranslate"><span class="pre">Snake.check_wall_collision()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#game.snake.Snake.draw"><code class="docutils literal notranslate"><span class="pre">Snake.draw()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#game.snake.Snake.get_head_position"><code class="docutils literal notranslate"><span class="pre">Snake.get_head_position()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#game.snake.Snake.grow"><code class="docutils literal notranslate"><span class="pre">Snake.grow()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#game.snake.Snake.move"><code class="docutils literal notranslate"><span class="pre">Snake.move()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#direction">Direction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api.html#game.snake.Direction"><code class="docutils literal notranslate"><span class="pre">Direction</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#game.snake.Direction.DOWN"><code class="docutils literal notranslate"><span class="pre">Direction.DOWN</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#game.snake.Direction.LEFT"><code class="docutils literal notranslate"><span class="pre">Direction.LEFT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#game.snake.Direction.RIGHT"><code class="docutils literal notranslate"><span class="pre">Direction.RIGHT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#game.snake.Direction.UP"><code class="docutils literal notranslate"><span class="pre">Direction.UP</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#apple">Apple</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api.html#game.apple.Apple"><code class="docutils literal notranslate"><span class="pre">Apple</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#game.apple.Apple.__init__"><code class="docutils literal notranslate"><span class="pre">Apple.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#game.apple.Apple.is_eaten"><code class="docutils literal notranslate"><span class="pre">Apple.is_eaten()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#game.apple.Apple.respawn"><code class="docutils literal notranslate"><span class="pre">Apple.respawn()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#gamecontroller">GameController</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api.html#game.game_controller.GameController"><code class="docutils literal notranslate"><span class="pre">GameController</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#game.game_controller.GameController.__init__"><code class="docutils literal notranslate"><span class="pre">GameController.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#game.game_controller.GameController.draw"><code class="docutils literal notranslate"><span class="pre">GameController.draw()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#game.game_controller.GameController.draw_game_over"><code class="docutils literal notranslate"><span class="pre">GameController.draw_game_over()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#game.game_controller.GameController.handle_events"><code class="docutils literal notranslate"><span class="pre">GameController.handle_events()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#game.game_controller.GameController.reset_game"><code class="docutils literal notranslate"><span class="pre">GameController.reset_game()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#game.game_controller.GameController.run"><code class="docutils literal notranslate"><span class="pre">GameController.run()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#game.game_controller.GameController.save_game_result"><code class="docutils literal notranslate"><span class="pre">GameController.save_game_result()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#game.game_controller.GameController.update"><code class="docutils literal notranslate"><span class="pre">GameController.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#databasemanager">DatabaseManager</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api.html#database.db_manager.DatabaseManager"><code class="docutils literal notranslate"><span class="pre">DatabaseManager</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#database.db_manager.DatabaseManager.__init__"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#database.db_manager.DatabaseManager.get_all_games"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.get_all_games()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#database.db_manager.DatabaseManager.get_player_statistics"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.get_player_statistics()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#database.db_manager.DatabaseManager.get_top_scores"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.get_top_scores()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api.html#database.db_manager.DatabaseManager.save_game_result"><code class="docutils literal notranslate"><span class="pre">DatabaseManager.save_game_result()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tests.html">Тестирование</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tests.html#id2">Запуск тестов</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tests.html#id3">Структура тестов</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tests.html#id4">Описание тестов</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tests.html#test-base-py">test_base.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tests.html#test-snake-py">test_snake.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tests.html#test-apple-py">test_apple.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tests.html#test-game-controller-py">test_game_controller.py</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../database.html">База данных</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../database.html#id2">Структура базы данных</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database.html#id3">Работа с базой данных</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../database.html#id4">Сохранение результатов</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database.html#id5">Получение статистики</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database.html#pandas">Анализ данных с Pandas</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">История изменений</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#id2">Версия 1.0.0 (2024)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html#id3">Планируемые улучшения</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">snake</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Навигация по страницам">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Обзор: исходный код модуля</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Все модули, в которых есть код</h1>
+<ul><li><a href="database/db_manager.html">database.db_manager</a></li>
+<li><a href="game/apple.html">game.apple</a></li>
+<li><a href="game/base.html">game.base</a></li>
+<li><a href="game/game_controller.html">game.game_controller</a></li>
+<li><a href="game/snake.html">game.snake</a></li>
+</ul>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2026, Ilya. </p>
+  </div>
+
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

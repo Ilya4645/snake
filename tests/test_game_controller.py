@@ -5,8 +5,6 @@
 процессом: инициализацией, обработкой событий, обновлением состояния,
 отрисовкой и сохранением результатов.
 
-Так как GameController тесно связан с Pygame, тесты используют
-специальные подходы для имитации игровых ситуаций.
 """
 
 import unittest
@@ -17,7 +15,6 @@ from game.game_controller import GameController
 from game.snake import Snake, Direction
 from game.apple import Apple
 
-# Добавляем корневую директорию в путь
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 
